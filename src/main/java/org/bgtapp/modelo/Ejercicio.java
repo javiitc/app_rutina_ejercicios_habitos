@@ -4,12 +4,12 @@ public class Ejercicio {
 
     private String nombre;
     private String tipo;
-    private String categoria;
+    private String grupoMuscular;
 
-    public Ejercicio(String nombre, String tipo, String categoria) {
+    public Ejercicio(String nombre, String tipo, String grupoMuscular) {
         this.nombre = nombre;
         this.tipo = tipo;
-        this.categoria = categoria;
+        this.grupoMuscular = grupoMuscular;
     }
 
     public String getNombre() {
@@ -20,12 +20,12 @@ public class Ejercicio {
         this.nombre = nombre;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getGrupoMuscular() {
+        return grupoMuscular;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setGrupoMuscular(String grupoMuscular) {
+        this.grupoMuscular = grupoMuscular;
     }
 
     public String getTipo() {
@@ -38,6 +38,6 @@ public class Ejercicio {
 
     @Override
     public String toString() {
-        return nombre + " || " + categoria +  " || " + tipo;
+        return nombre + " || " + grupoMuscular +  " || " + tipo;
     }
 }

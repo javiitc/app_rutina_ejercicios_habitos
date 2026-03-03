@@ -47,7 +47,8 @@ public class Sesion {
 
     @Override
     public String toString() {
-        return "Duracion: " + duracion + " Notas: " + notas;
+        return "Duracion: " + duracion + " min " + " Notas: " + notas + "\n" +
+                "Sesion realizada el " + fecha;
     }
 
     public void agregarSerie(Serie serie) {

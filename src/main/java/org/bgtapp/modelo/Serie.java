@@ -38,6 +38,6 @@ public class Serie {
 
     @Override
     public String toString(){
-        return ejercicio.getNombre() + " || Repeticiones: " + repeticiones + " || Peso: " + peso;
+        return ejercicio.getNombre() + " || Repeticiones: " + repeticiones + " || Peso: " + peso + " kg";
     }
 }
