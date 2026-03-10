@@ -1,18 +1,20 @@
 package org.bgtapp.app;
 
-import org.bgtapp.modelo.GestorSesiones;
-import org.bgtapp.modelo.Sesion;
+import org.bgtapp.modelo.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
 
      private GestorSesiones gestorSesiones;
      private Scanner sc;
+     private CatalogoEjercicios catalogoEjercicios;
 
     public Menu(){
         this.gestorSesiones = new  GestorSesiones();
         this.sc = new Scanner(System.in);
+        this.catalogoEjercicios = new CatalogoEjercicios();
     }
 
     public GestorSesiones getGestorSesiones() {
@@ -78,8 +80,43 @@ public class Menu {
         }
 
         Sesion sesion = new Sesion(duracion, nota);
-        gestorSesiones.agregarSesion(sesion);
 
+        boolean introducirSerie = true;
+
+        while (introducirSerie){
+            System.out.println("Introducir serie? \n" +
+                    "1. SI || 2. NO");
+
+            int eleccion2 = sc.nextInt();
+            sc.nextLine();
+
+            if  (eleccion2 == 1){
+
+                System.out.println("Elige el ejercicio a introducir:");
+
+                ArrayList <Ejercicio> listaEjercicios = catalogoEjercicios.cargarEjercicios();
+                for (int i = 0; i < listaEjercicios.size(); i++){
+                    System.out.println((i+1) + ". " + listaEjercicios.get(i).getNombre());
+                }
+
+                int eleccionEjercicio = sc.nextInt();
+
+                Ejercicio ejercicio = listaEjercicios.get(eleccionEjercicio - 1);
+
+                System.out.println("Numero de repeticiones:");
+                int repeticiones = sc.nextInt();
+                System.out.println("Peso:");
+                double peso = sc.nextDouble();
+
+                Serie serie = new  Serie(repeticiones, ejercicio, peso);
+
+                sesion.agregarSerie(serie);
+            } else  if (eleccion2 == 2){
+                introducirSerie = false;
+            }
+        }
+
+        gestorSesiones.agregarSesion(sesion);
         System.out.println("Sesion guardada correctamente");
     }
 

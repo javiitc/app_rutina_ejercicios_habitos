@@ -1,0 +1,55 @@
+{
+  "ejercicios": [
+    {
+      "nombre": "Press Banca (Barra)",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Pecho"
+    },
+    {
+      "nombre": "Dominada",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Espalda"
+    },
+    {
+      "nombre": "Remo T",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Espalda alta"
+    },
+    {
+      "nombre": "Sentadilla",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Cuadríceps / Glúteos"
+    },
+    {
+      "nombre": "Press de piernas (Prensa)",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Cuadríceps"
+    },
+    {
+      "nombre": "Press Banca Inclinado (Mancuernas)",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Pecho"
+    },
+    {
+      "nombre": "Press Banca Inclinado (Barra)",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Pecho"
+    },
+    {
+      "nombre": "Jalón al pecho (Agarre neutro)",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Espalda"
+    },
+    {
+      "nombre": "Extensión de cuadríceps",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Cuadríceps"
+    },
+    {
+      "nombre": "Pesp muerto (barra)",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Cuadríceps"
+    }
+
+  ]
+}

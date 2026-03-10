@@ -5,13 +5,14 @@ import java.util.ArrayList;
 
 public class Sesion {
 
-    private LocalDate fecha;
+    private String fecha;
     private int duracion;
     private String notas;
+    private int id;
     private ArrayList <Serie> series;
 
     public Sesion(int duracion, String notas) {
-        this.fecha = LocalDate.now();
+        this.fecha = LocalDate.now().toString();
         this.duracion = duracion;
         this.notas = notas;
         this.series = new ArrayList<>();
@@ -41,8 +42,17 @@ public class Sesion {
         this.series = series;
     }
 
-    public LocalDate getFecha() {
+    public void setFecha(String fecha) { this.fecha = fecha; }
+
+    public String getFecha() {
         return fecha;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
@@ -54,4 +64,5 @@ public class Sesion {
     public void agregarSerie(Serie serie) {
         this.series.add(serie);
     }
+
 }
