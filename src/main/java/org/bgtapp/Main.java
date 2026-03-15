@@ -8,7 +8,7 @@ import org.bgtapp.modelo.*;
 import java.util.ArrayList;
 
 public class Main {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         ConexionDB.iniciarTablas();
         AppJavaFX.launch(AppJavaFX.class, args);
         Menu menu = new Menu();
