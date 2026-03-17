@@ -23,9 +23,8 @@ public class PantallaVerSesiones {
         btnVolver.getStyleClass().add("btn-secundario");
         btnVolver.setOnAction(e -> AppJavaFX.mostrarMenu());
 
-        HBox cabecera = new HBox(titulo);
+        HBox cabecera = new HBox(16, titulo, btnVolver);
         HBox.setHgrow(titulo, Priority.ALWAYS);
-        cabecera.getChildren().add(btnVolver);
         cabecera.setAlignment(Pos.CENTER_LEFT);
         cabecera.setId("cabecera");
         cabecera.setPadding(new Insets(20, 30, 10, 30));

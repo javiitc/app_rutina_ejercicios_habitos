@@ -14,7 +14,7 @@ public class PantallaAgregarSesion {
 
     public static Scene crear(GestorSesiones gestor) {
 
-        // --- Cabecera ---
+        //  Cabecera
         Label titulo = new Label("Nueva Sesión");
         titulo.setId("titulo-principal");
 
@@ -22,14 +22,14 @@ public class PantallaAgregarSesion {
         btnVolver.getStyleClass().add("btn-secundario");
         btnVolver.setOnAction(e -> AppJavaFX.mostrarMenu());
 
-        HBox cabecera = new HBox(titulo);
-        HBox.setHgrow(titulo, Priority.ALWAYS);
-        cabecera.getChildren().add(btnVolver);
+        Region espaciador = new Region();
+        HBox.setHgrow(espaciador, Priority.ALWAYS);
+        HBox cabecera = new HBox(16, titulo, espaciador, btnVolver);
         cabecera.setAlignment(Pos.CENTER_LEFT);
         cabecera.setId("cabecera");
         cabecera.setPadding(new Insets(20, 30, 10, 30));
 
-        // --- Formulario duración y notas ---
+        //Formulario duración y notas
         Label lblDuracion = new Label("Duración (min):");
         lblDuracion.getStyleClass().add("label-form");
 
@@ -55,7 +55,7 @@ public class PantallaAgregarSesion {
         formGrid.add(lblNotas, 0, 1);
         formGrid.add(txtNotas, 1, 1);
 
-        // --- Sección series ---
+        // Sección series
         Label lblSeries = new Label("Series");
         lblSeries.getStyleClass().add("subtitulo");
         lblSeries.setPadding(new Insets(10, 30, 5, 30));
@@ -156,7 +156,7 @@ public class PantallaAgregarSesion {
             txtPeso.clear();
         });
 
-        // --- Botón guardar ---
+        // Botón guardar
         Button btnGuardar = new Button("Guardar Sesión");
         btnGuardar.getStyleClass().add("btn-primario");
         btnGuardar.setOnAction(e -> {
@@ -194,7 +194,7 @@ public class PantallaAgregarSesion {
         piePantalla.setAlignment(Pos.CENTER_RIGHT);
         piePantalla.setPadding(new Insets(15, 30, 20, 30));
 
-        // --- Layout raíz ---
+        // Layout raíz
         VBox contenido = new VBox(
                 cabecera,
                 formGrid,
