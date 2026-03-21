@@ -46,9 +46,24 @@
       "grupoMuscular": "Cuadríceps"
     },
     {
-      "nombre": "Pesp muerto (barra)",
+      "nombre": "Peso muerto (barra)",
       "tipo": "Fuerza",
       "grupoMuscular": "Cuadríceps"
+    },
+    {
+      "nombre": "Curl de bíceps",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Bíceps"
+    },
+    {
+      "nombre": "Extensión de tríceps",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Tríceps"
+    },
+    {
+      "nombre": "Elevaciones Laterales",
+      "tipo": "Fuerza",
+      "grupoMuscular": "Hombros"
     }
 
   ]
