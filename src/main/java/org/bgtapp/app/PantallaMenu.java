@@ -10,7 +10,7 @@ import javafx.scene.layout.VBox;
 public class PantallaMenu {
 
     public static Scene crear() {
-        Label titulo = new Label("BGT APP");
+        Label titulo = new Label("BE GREATER TOGETHER");
         titulo.setId("titulo-principal");
 
         Button btnAnyadirSesion = new Button("1.  Añadir Sesión");
